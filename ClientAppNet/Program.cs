@@ -20,8 +20,10 @@ namespace ClientAppNet
                 using (var client = new TcpClient("127.0.0.1", 5000)) {
                     Console.WriteLine("Соединение установлено");
                     var stream = client.GetStream();
-                    while (true)
+                    int i = 0;
+                    while (i < 5)
                     {
+                        i++;
                         //Console.WriteLine("напишите сообщение для отправлки или exit для выхода: ");
                         //string message = Console.ReadLine();
                         //if (message.ToLower() == "exit") { break; }
